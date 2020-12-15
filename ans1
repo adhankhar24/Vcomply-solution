@@ -1,0 +1,53 @@
+// C++ used
+
+struct interval{
+long start, end;
+}
+
+// for sorting
+bool comp_int(interval I1, interval I2){
+return I1.start < I2.start;
+}
+
+class leave_sys {
+private:
+  int n_alloted=0;
+public:
+  vector<interval> occupied;
+  
+  // mapping emp_id to leave interval
+  map<int, interval> lev;
+  
+  //initialising object with already alloted leaves a_l
+  void init(vector<string> a_l){
+    for (string i:a_l){
+      stringstram ss(i);
+      string token;
+      while (ss>>token){
+         if (token == "emp_id"){
+            ss>>token;
+            interval i1;
+            lev[token] = i1;
+         }
+         if (token == "leavefrom"){
+             ss>>token
+             i1.start = day + 30*month + 365*year;
+      
+         }
+         if (token == "leaveto"){
+            i1.end = day + 30*month + 365*year;
+            lev[emp_id] = i1;
+         }
+      }
+    }
+    
+    sort(a_l.begin(), a_l.end(), comp_int);
+    
+    bool check_avail(interval leave){
+    ## traversing through sorted array of intervals to check if overlaps
+    return true if no overlapping 
+    false otherwise;
+    }
+  }
+  
+  
